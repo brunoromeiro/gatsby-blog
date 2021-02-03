@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Profile from './Profile'
+import Profile from '../Profile'
 
 const Layout = ({ children }) => {
   
@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <>
       <aside>
         <Profile></Profile>
-        </aside>
+      </aside>
       <main>{children}</main>
     </>
   )
