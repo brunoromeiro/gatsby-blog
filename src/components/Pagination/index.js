@@ -6,11 +6,11 @@ import * as S from './styled'
 
 const Pagination = ({isFirst, isLast, currentPage, numPages, prevPage, nextPage}) => (
   <S.PaginationWrapper>
-    {!isFirst && <Link to={prevPage}>pagina anterior</Link>}
+    {!isFirst && <Link to={prevPage}>← pagina anterior</Link>}
     
     <p>{currentPage} de {numPages}</p>
     
-    {!isLast && <Link to={nextPage}>próxima página</Link>}
+    {!isLast && <Link to={nextPage}>próxima página →</Link>}
   </S.PaginationWrapper>
 ) 
 
