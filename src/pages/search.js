@@ -1,23 +1,14 @@
 import React from "react"
-import algoliasearch from "algoliasearch/lite"
-import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
-import Layout from '../components/Layout'
 
-const algolia = {
-  appId: process.env.GATSBY_ALGOLIA_APP_ID,
-  searchOnlyApiKey: process.env.GATSBY_ALGOLIA_SEARCH_KEY,
-  indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-}
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
+import Search from "../components/Search"
 
-const searchClient = algoliasearch(algolia.appId, algolia.searchOnlyApiKey)
-
-const Search = () => (
+const SearchPage = () => (
   <Layout>
-    <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
-      <SearchBox />
-      <Hits />
-    </InstantSearch>
+    <SEO title="Search" />
+    <Search />
   </Layout>
 )
 
-export default Search
+export default SearchPage

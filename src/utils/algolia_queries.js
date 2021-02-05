@@ -11,6 +11,7 @@ const PostsQuery = `{
         frontmatter {
           category
           title
+          background
           description
           date_timestamp: date
           date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
