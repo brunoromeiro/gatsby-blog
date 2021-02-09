@@ -92,8 +92,6 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/376bd958-4732-475a-9b3c-f9c59ced77c3/deploy-status)](https://app.netlify.com/sites/blog-brunoromeiro/deploys)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
