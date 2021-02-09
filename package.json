@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A blog about frontend development and other cool stuff.",
+  "version": "1.0.0",
+  "author": "Bruno Romeiro <bruno.romeiro@gmail.com>",
   "dependencies": {
     "algoliasearch": "^4.8.4",
     "dotenv": "^8.2.0",

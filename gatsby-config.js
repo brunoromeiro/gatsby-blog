@@ -4,8 +4,8 @@ const queries = require('./src/utils/algolia_queries')
 
 module.exports = {
   siteMetadata: {
-    title: `My Blog`,
-    description: `A blog about frontend development and other cool stuff.`,
+    title: `Bruno Romeiro`,
+    description: `Um blog sobre desenvolvimento de front-end e outras coisas legais.`,
     position: `FrontEnd Engenieer`,
     author: `@brunoromeiro`,
     siteUrl: `http://localhost:8000`
