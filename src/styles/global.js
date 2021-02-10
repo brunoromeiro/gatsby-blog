@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
+
 const GlobalStyles = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
@@ -35,7 +36,8 @@ const GlobalStyles = createGlobalStyle`
     background: #16202c;
     line-height: 1;
     font-size: 100%;
-    font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    //font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
   }
   ol, ul {
     list-style: none;
@@ -54,12 +56,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body.dark {
-    --borders: #38444d;
+    --borders: #5f6368;
     --texts: #8899a6;
     --postColor: #fff;
-    --highlight: #1fa1f2;
-    --mediumBackground: #192734;
-    --background: #16202c;
+    --highlight: #8ab4f8;
+    --mediumBackground: #202124;
+    --background: #3c4043;
     --white: #fff;
     --black: #222;
   }
