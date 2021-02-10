@@ -11,6 +11,14 @@ module.exports = {
     siteUrl: `https://blog-brunoromeiro.netlify.app/`
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Source Sans Pro`
+        ]
+      }
+    },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
