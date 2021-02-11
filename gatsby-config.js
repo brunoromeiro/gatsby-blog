@@ -78,6 +78,7 @@ module.exports = {
         enablePartialUpdates: true
       },
     },
+    // commment
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
