@@ -38,7 +38,7 @@ npm uninstall karma karma-chrome-launcher karma-coverage-istanbul-reporter karma
 ### 2. Remover o teste do `angular.json`
 Remova toda a seção de teste do arquivo `angular.json`, conforme abaixo:
 
-```
+```json
 "test": {
     "builder": "@angular-devkit/build-angular:karma",
     "options": {
@@ -79,7 +79,7 @@ import 'jest-preset-angular';
 
 Por default o arquivo `tsconfig.spec.ts` tem a seguinte configuração:
 
-```
+```js
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
@@ -102,7 +102,7 @@ Por default o arquivo `tsconfig.spec.ts` tem a seguinte configuração:
 
 Se faz necessário trocar o `jasmine` por `jest` e remover o `src/test.ts` das configurações, já que excluímos ele no item 3 deste, ficando da seguinte forma:
 
-```
+```js
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
@@ -140,7 +140,7 @@ Para utilizar o Jest precisamos trocar para:
 
 Por fim, só adicionar esse trecho de código no final do seu `package.json`
 
-```
+```json
 "jest": {
     "preset": "jest-preset-angular",
     "setupFilesAfterEnv": [
