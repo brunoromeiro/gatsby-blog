@@ -2,7 +2,7 @@ backend:
   name: github
   repo: brunoromeiro/gatsby-blog
   branch: main
-  site_domain: https://brunoromeiro.com/
+  site_domain: https://brunoromeiro.com
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/img'
