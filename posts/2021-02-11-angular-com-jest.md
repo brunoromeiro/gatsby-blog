@@ -79,7 +79,7 @@ import 'jest-preset-angular';
 
 Por default o arquivo `tsconfig.spec.ts` tem a seguinte configuração:
 
-```js
+```javascript
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
@@ -102,7 +102,7 @@ Por default o arquivo `tsconfig.spec.ts` tem a seguinte configuração:
 
 Se faz necessário trocar o `jasmine` por `jest` e remover o `src/test.ts` das configurações, já que excluímos ele no item 3 deste, ficando da seguinte forma:
 
-```js
+```javascript
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
