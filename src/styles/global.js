@@ -56,25 +56,25 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body.dark {
-    --borders: #5f6368;
+    --borders: #121212;
     --texts: #8899a6;
     --postColor: #fff;
-    --highlight: #8ab4f8;
-    --mediumBackground: #202124;
-    --background: #3c4043;
+    --highlight: #03dac6;
+    --mediumBackground: #121212;
+    --background: #1f1a24;
     --white: #fff;
-    --black: #222;
+    --black: #000;
   }
 
   body.light {
     --borders: #dedede;
-    --texts: #555555;
+    --texts: #000000;
     --postColor: #111;
-    --highlight: #1fa1f2;
+    --highlight: #b00020;
     --mediumBackground: #f0f0f3;
     --background: #fff;
     --white: #fff;
-    --black: #222;
+    --black: #000;
   }
 
 `
