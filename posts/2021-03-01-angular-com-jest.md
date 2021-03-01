@@ -6,6 +6,10 @@ date: 2020-08-13 12:00:00
 thumbnail: assets/img/zqhk5z6ovrt6r9u58e43.png
 category: js
 background: "#D6BA32"
+tags:
+  - angular
+  - testing
+  - jest
 ---
 ## O que é Jest?
 > É um poderoso Framework de Testes em JavaScript com um foco na simplicidade, que funciona com projetos usando: Babel, TypeScript, Node, React, Angular, Vue e muito mais!
