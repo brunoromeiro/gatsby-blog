@@ -4,93 +4,101 @@ import { Link } from 'gatsby'
 
 export const PostItemLink = styled(Link)`
   color: var(--texts);
-  display: flex;
+  display: block;
   text-decoration: none;
+  height: 100%;
 
-  body#grid & {
-    background-color: var(--background)
-  }
-
-  &:hover {
-    color: var(--highlight);
+  &:focus-visible {
+    outline: 2px solid var(--highlight);
+    outline-offset: 4px;
   }
 `
 
-export const PostItemWrapper = styled.section`
-  align-items: center;
-  border-bottom: 1px solid var(--borders);
+export const PostItemWrapper = styled.article`
+  background: var(--surface);
+  border: 1px solid var(--borders);
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 30px var(--shadow);
   display: flex;
-  padding: 2rem 3rem;
-  width: 100%;
+  gap: 1.5rem;
+  height: 100%;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
+  ${PostItemLink}:hover & {
+    border-color: var(--highlight);
+    box-shadow: 0 14px 40px var(--shadow);
+    transform: translateY(-3px);
+  }
 
   body#grid & {
-    border: none;
-    padding: 2rem 1rem;
     flex-direction: column;
-    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
   }
 
   ${media.lessThan("large")`
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 2rem 1rem;
+    gap: 1rem;
+    padding: 1.25rem;
   `}
 `
 
 export const PostItemTag = styled.div`
-  align-items:center;
-  background: ${props => props.background ? props.background : 'var(--highlight)'};
-  border-radius: 50%;
+  align-items: center;
+  background: ${props => props.background || 'var(--highlight)'};
+  border-radius: 1rem;
   color: var(--postColor);
   display: flex;
-  font-size: 1.3rem;
-  font-weight: 700;
+  flex: 0 0 5rem;
+  font-size: 0.85rem;
+  font-weight: 800;
   justify-content: center;
-  min-height: 90px;
-  min-width: 90px;
+  min-height: 5rem;
+  letter-spacing: 0.04em;
+  padding: 0.5rem;
+  text-align: center;
   text-transform: uppercase;
 
   ${media.lessThan("large")`
-    border-radius: 0;
-    font-size: 1rem;
-    min-height: auto;
-    min-width: auto;
-    padding: .2rem .5rem;
-    margin-bottom: .7rem;
+    align-self: flex-start;
+    flex-basis: auto;
+    min-height: 0;
+    min-width: 0;
+    padding: 0.35rem 0.65rem;
   `}
-
-  body#grid & {
-    margin-bottom: 1.5rem;
-  }
 `
 
 export const PostItemInfo = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
-  margin-left: 1.5rem;
-
-  ${media.lessThan("large")`
-    margin: 0;
-  `}
+  min-width: 0;
 `
 
 export const PostItemDate = styled.time`
-  font-size: 0.9rem;
+  color: var(--mutedText);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
 `
 
 export const PostItemTitle = styled.h2`
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin: 0.2rem 0 0.5rem;
+  color: var(--heading);
+  font-size: 1.35rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0.4rem 0 0.65rem;
 
   body#grid & {
-    line-height: 1.1;
-    margin: 0.8rem 0;
+    font-size: 1.45rem;
   }
 `
 
 export const PostItemDescription = styled.p`
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.2;
+  color: var(--texts);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
 `
