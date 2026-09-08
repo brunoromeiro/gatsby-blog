@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - modernize/phase-1-foundation
+    paths-ignore:
+      - package-lock.json
   workflow_dispatch:
 
 permissions:
@@ -19,13 +21,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
+          cache: npm
 
       - name: Install dependencies and refresh lockfile
         run: |
           rm -f package-lock.json
-          set -o pipefail
-          npm install --legacy-peer-deps --no-audit --no-fund --loglevel verbose 2>&1 | tee npm-install.log
+          npm install --legacy-peer-deps --no-audit --no-fund
 
       - name: Build
         run: npm run build
