@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - modernize/phase-1-foundation
-    paths-ignore:
-      - package-lock.json
   workflow_dispatch:
 
 permissions:
@@ -22,45 +20,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
-      - name: Install dependencies and refresh lockfile
-        run: |
-          rm -f package-lock.json
-          set -o pipefail
-          set +e
-          npm install --legacy-peer-deps --no-audit --no-fund --loglevel verbose 2>&1 | tee npm-install.log
-          status=${PIPESTATUS[0]}
-          set -e
-          if [ "$status" -ne 0 ]; then
-            echo "===== npm debug log ====="
-            cat /home/runner/.npm/_logs/*debug-0.log || true
-            echo "===== npm install output ====="
-            cat npm-install.log || true
-            exit "$status"
-          fi
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps --no-audit --no-fund
 
       - name: Build
-        run: |
-          set -o pipefail
-          set +e
-          npm run build 2>&1 | tee gatsby-build.log
-          status=${PIPESTATUS[0]}
-          set -e
-          if [ "$status" -ne 0 ]; then
-            echo "===== Gatsby build output ====="
-            cat gatsby-build.log || true
-            exit "$status"
-          fi
-
-      - name: Commit refreshed lockfile
-        run: |
-          if git diff --quiet -- package-lock.json; then
-            echo "package-lock.json is already up to date"
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add package-lock.json
-          git commit -m "chore: refresh package lockfile"
-          git push
+        run: npm run build
