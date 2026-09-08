@@ -4,39 +4,40 @@
   "description": "A blog about frontend development and other cool stuff.",
   "version": "1.0.0",
   "author": "Bruno Romeiro <bruno.romeiro@gmail.com>",
+  "engines": {
+    "node": ">=18 <25"
+  },
   "dependencies": {
     "algoliasearch": "^4.8.4",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.26.1",
-    "gatsby-image": "^2.5.0",
+    "gatsby": "5.16.1",
     "gatsby-plugin-algolia-search": "^0.5.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-manifest": "^2.6.1",
+    "gatsby-plugin-image": "3.16.0",
+    "gatsby-plugin-manifest": "5.16.0",
     "gatsby-plugin-netlify-cms": "^4.10.0",
-    "gatsby-plugin-offline": "^3.4.0",
-    "gatsby-plugin-react-helmet": "^3.4.0",
-    "gatsby-plugin-sharp": "^2.8.0",
-    "gatsby-plugin-sitemap": "^2.12.0",
-    "gatsby-plugin-styled-components": "^3.10.0",
-    "gatsby-plugin-transition-link": "^1.20.5",
-    "gatsby-remark-images": "^3.11.0",
+    "gatsby-plugin-offline": "6.16.0",
+    "gatsby-plugin-sharp": "5.16.0",
+    "gatsby-plugin-sitemap": "6.16.0",
+    "gatsby-plugin-styled-components": "6.16.0",
+    "gatsby-remark-images": "7.16.0",
     "gatsby-remark-lazy-load": "^1.0.2",
-    "gatsby-remark-prismjs": "^3.13.0",
+    "gatsby-remark-prismjs": "7.16.0",
     "gatsby-remark-relative-images": "^2.0.2",
-    "gatsby-source-filesystem": "^2.5.0",
-    "gatsby-transformer-remark": "^2.16.0",
-    "gatsby-transformer-sharp": "^2.6.0",
+    "gatsby-source-filesystem": "5.16.0",
+    "gatsby-transformer-remark": "6.16.0",
+    "gatsby-transformer-sharp": "5.16.0",
     "gsap": "^3.6.0",
     "lazysizes": "^5.3.0",
     "netlify-cms-app": "^2.14.21",
     "prismjs": "^1.23.0",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
+    "react": "19.2.0",
     "react-disqus-comments": "^1.4.0",
-    "react-dom": "^16.12.0",
+    "react-dom": "19.2.0",
     "react-helmet": "^6.1.0",
     "react-instantsearch-dom": "^6.9.0",
-    "styled-components": "^5.2.1",
+    "styled-components": "^6.5.3",
     "styled-icons": "^10.27.0",
     "styled-media-query": "^2.1.2"
   },
@@ -62,9 +63,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/brunoromeiro/gatsby-blog"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/brunoromeiro/gatsby-blog/issues"
   }
 }
