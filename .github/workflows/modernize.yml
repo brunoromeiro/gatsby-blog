@@ -26,7 +26,16 @@ jobs:
       - name: Install dependencies and refresh lockfile
         run: |
           rm -f package-lock.json
-          npm install --legacy-peer-deps --no-audit --no-fund
+          set -o pipefail
+          npm install --legacy-peer-deps --no-audit --no-fund --loglevel verbose 2>&1 | tee npm-install.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            echo "===== npm debug log ====="
+            cat /home/runner/.npm/_logs/*debug-0.log || true
+            echo "===== npm install output ====="
+            cat npm-install.log || true
+            exit "$status"
+          fi
 
       - name: Build
         run: npm run build
