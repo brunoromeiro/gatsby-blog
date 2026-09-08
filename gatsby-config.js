@@ -10,12 +10,6 @@ module.exports = {
     siteUrl: `https://brunoromeiro.com/`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Source Sans Pro`],
-      },
-    },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -55,7 +49,6 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          'gatsby-remark-lazy-load',
           'gatsby-remark-prismjs',
         ],
       },
