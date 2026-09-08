@@ -27,8 +27,10 @@ jobs:
         run: |
           rm -f package-lock.json
           set -o pipefail
+          set +e
           npm install --legacy-peer-deps --no-audit --no-fund --loglevel verbose 2>&1 | tee npm-install.log
           status=${PIPESTATUS[0]}
+          set -e
           if [ "$status" -ne 0 ]; then
             echo "===== npm debug log ====="
             cat /home/runner/.npm/_logs/*debug-0.log || true
