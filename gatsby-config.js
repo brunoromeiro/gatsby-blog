@@ -1,7 +1,5 @@
 require('dotenv').config()
 
-const queries = require('./src/utils/algolia_queries')
-
 module.exports = {
   trailingSlash: 'always',
   siteMetadata: {
@@ -65,17 +63,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-algolia-search`,
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-        queries,
-        chunkSize: 10000,
-        enablePartialUpdates: true,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Bruno Romeiro`,
@@ -89,11 +76,5 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-decap-cms`,
-      options: {
-        enableIdentityWidget: false,
-      },
-    },
   ],
 }
