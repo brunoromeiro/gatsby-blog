@@ -9,11 +9,8 @@
   },
   "dependencies": {
     "algoliasearch": "^4.27.0",
-    "decap-cms-app": "^3.16.0",
     "dotenv": "^8.2.0",
     "gatsby": "5.16.1",
-    "gatsby-plugin-algolia": "^1.0.3",
-    "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "3.16.0",
     "gatsby-plugin-manifest": "5.16.0",
