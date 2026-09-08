@@ -6,7 +6,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
   createTypes(`
     type MarkdownRemarkFrontmatter {
-      image: String
+      image: String @proxy(from: "thumbnail")
     }
 
     type MarkdownRemark implements Node {
