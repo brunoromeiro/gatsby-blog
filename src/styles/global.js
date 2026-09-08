@@ -1,82 +1,66 @@
 import { createGlobalStyle } from 'styled-components'
 
-
 const GlobalStyles = createGlobalStyle`
-  /* http://meyerweb.com/eric/tools/css/reset/ 
-    v2.0 | 20110126
-    License: none (public domain)
-  */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed, 
-  figure, figcaption, footer, header, hgroup, 
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  html {
+    scroll-behavior: smooth;
   }
-  /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure, 
-  footer, header, hgroup, menu, nav, section {
-    display: block;
-  }
+
   body {
-    background: #16202c;
-    line-height: 1;
-    font-size: 100%;
-    //font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-family: 'Source Sans Pro', sans-serif;
+    background: var(--background);
+    color: var(--texts);
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
+
   ol, ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
-  blockquote, q {
-    quotes: none;
+
+  img {
+    max-width: 100%;
   }
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-    content: '';
-    content: none;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
+
+  button, input, textarea, select {
+    font: inherit;
   }
 
   body.dark {
-    --borders: #121212;
-    --texts: #8899a6;
-    --postColor: #fff;
+    --borders: #303641;
+    --texts: #aab4c0;
+    --mutedText: #7f8a98;
+    --heading: #f5f7fa;
+    --postColor: #07121c;
     --highlight: #03dac6;
-    --mediumBackground: #121212;
-    --background: #1f1a24;
+    --mediumBackground: #121821;
+    --background: #0b1118;
+    --surface: #121a24;
+    --shadow: rgba(0, 0, 0, 0.24);
     --white: #fff;
     --black: #000;
   }
 
   body.light {
-    --borders: #dedede;
-    --texts: #000000;
-    --postColor: #111;
+    --borders: #e4e8ee;
+    --texts: #4d5968;
+    --mutedText: #7a8695;
+    --heading: #17202a;
+    --postColor: #fff;
     --highlight: #b00020;
-    --mediumBackground: #f0f0f3;
-    --background: #fff;
+    --mediumBackground: #f7f8fa;
+    --background: #f4f6f8;
+    --surface: #fff;
+    --shadow: rgba(23, 32, 42, 0.08);
     --white: #fff;
     --black: #000;
   }
-
 `
 
 export default GlobalStyles
