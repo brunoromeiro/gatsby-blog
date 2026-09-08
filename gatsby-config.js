@@ -89,6 +89,11 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-decap-cms`,
+      options: {
+        enableIdentityWidget: false,
+      },
+    },
   ],
 }
