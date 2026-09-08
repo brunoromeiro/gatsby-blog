@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from 'gatsby'
 
-export const PostItemLink = styled(AniLink)`
+export const PostItemLink = styled(Link)`
   color: var(--texts);
   display: flex;
   text-decoration: none;
@@ -78,13 +78,13 @@ export const PostItemDate = styled.time`
   font-size: 0.9rem;
 `
 
-export const PostItemTitle = styled.h1`
+export const PostItemTitle = styled.h2`
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0.2rem 0 0.5rem;
 
   body#grid & {
-    line-height: 1.1.%;
+    line-height: 1.1;
     margin: 0.8rem 0;
   }
 `
