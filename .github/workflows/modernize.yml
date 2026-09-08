@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - modernize/phase-1-foundation
+    paths-ignore:
+      - package-lock.json
   workflow_dispatch:
 
 permissions:
