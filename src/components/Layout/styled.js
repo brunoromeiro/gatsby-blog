@@ -2,27 +2,22 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const LayoutWrapper = styled.section`
-  display: flex;
-
-  ${media.lessThan("large")`
-    flex-direction: column;
-  `}
+  min-height: 100vh;
 `
 
 export const LayoutMain = styled.main`
   background: var(--background);
+  color: var(--texts);
   min-height: 100vh;
-  padding: 0 3.75rem 0 24rem;
-  transition: background, color 0.5s;
+  padding: 4rem 4rem 5rem 24rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
   width: 100%;
 
-  body#grid & {
-    grid-template-areas:
-      "posts"
-      "pagination"
-  }
-
   ${media.lessThan("large")`
-    padding: 4.125rem 0 3rem 0;
+    padding: 5.5rem 1.25rem 4rem;
+  `}
+
+  ${media.lessThan("medium")`
+    padding: 5rem 1rem 3rem;
   `}
 `
