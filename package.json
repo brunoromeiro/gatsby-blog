@@ -30,7 +30,6 @@
     "prismjs": "^1.23.0",
     "prop-types": "^15.7.2",
     "react": "18.3.1",
-    "react-disqus-comments": "^1.4.0",
     "react-dom": "18.3.1",
     "react-helmet": "^6.1.0",
     "react-instantsearch-dom": "^6.9.0",
@@ -66,5 +65,8 @@
   },
   "bugs": {
     "url": "https://github.com/brunoromeiro/gatsby-blog/issues"
+  },
+  "allowScripts": {
+    "sharp@0.32.6": true
   }
 }
