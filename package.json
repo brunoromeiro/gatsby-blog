@@ -9,13 +9,14 @@
   },
   "dependencies": {
     "algoliasearch": "^4.8.4",
+    "decap-cms-app": "^3.16.0",
     "dotenv": "^8.2.0",
     "gatsby": "5.16.1",
     "gatsby-plugin-algolia-search": "^0.5.0",
+    "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "3.16.0",
     "gatsby-plugin-manifest": "5.16.0",
-    "gatsby-plugin-netlify-cms": "^4.10.0",
     "gatsby-plugin-offline": "6.16.0",
     "gatsby-plugin-sharp": "5.16.0",
     "gatsby-plugin-sitemap": "6.16.0",
@@ -29,7 +30,6 @@
     "gatsby-transformer-sharp": "5.16.0",
     "gsap": "^3.6.0",
     "lazysizes": "^5.3.0",
-    "netlify-cms-app": "^2.14.21",
     "prismjs": "^1.23.0",
     "prop-types": "^15.7.2",
     "react": "19.2.0",
@@ -42,6 +42,7 @@
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^2.3.0",
     "cross-env": "^7.0.3",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
