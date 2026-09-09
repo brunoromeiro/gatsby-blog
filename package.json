@@ -1,72 +1,39 @@
 {
-  "name": "gatsby-blog",
+  "name": "brunoromeiro-blog",
+  "version": "2.0.0",
   "private": true,
-  "description": "A blog about frontend development and other cool stuff.",
-  "version": "1.0.0",
-  "author": "Bruno Romeiro <bruno.romeiro@gmail.com>",
+  "description": "Bruno Romeiro — software engineering, technology and technical leadership.",
+  "author": "Bruno Romeiro",
+  "license": "0BSD",
+  "type": "module",
   "engines": {
-    "node": ">=18 <25"
+    "node": ">=20.9.0 <25"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "generate:importmap": "payload generate:importmap"
   },
   "dependencies": {
-    "algoliasearch": "^4.27.0",
-    "dotenv": "^8.2.0",
-    "gatsby": "5.16.1",
-    "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-image": "3.16.0",
-    "gatsby-plugin-manifest": "5.16.0",
-    "gatsby-plugin-offline": "6.16.0",
-    "gatsby-plugin-sharp": "5.16.0",
-    "gatsby-plugin-sitemap": "6.16.0",
-    "gatsby-plugin-styled-components": "6.16.0",
-    "gatsby-remark-images": "7.16.0",
-    "gatsby-remark-lazy-load": "^1.0.2",
-    "gatsby-remark-prismjs": "7.16.0",
-    "gatsby-remark-relative-images": "^2.0.2",
-    "gatsby-source-filesystem": "5.16.0",
-    "gatsby-transformer-remark": "6.16.0",
-    "gatsby-transformer-sharp": "5.16.0",
-    "gsap": "^3.6.0",
-    "lazysizes": "^5.3.0",
-    "prismjs": "^1.23.0",
-    "prop-types": "^15.7.2",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-helmet": "^6.1.0",
-    "react-instantsearch-dom": "^6.9.0",
-    "styled-components": "^6.5.3",
-    "styled-icons": "^10.27.0",
-    "styled-media-query": "^2.1.2"
+    "@payloadcms/db-postgres": "^3.88.0",
+    "@payloadcms/next": "^3.88.0",
+    "@payloadcms/richtext-lexical": "^3.88.0",
+    "next": "^16.3.3",
+    "payload": "^3.88.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.34.3"
   },
   "devDependencies": {
-    "ajv": "^8.17.1",
-    "babel-plugin-styled-components": "^2.3.0",
-    "cross-env": "^7.0.3",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "2.2.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop:playground": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/brunoromeiro/gatsby-blog"
-  },
-  "bugs": {
-    "url": "https://github.com/brunoromeiro/gatsby-blog/issues"
-  },
-  "allowScripts": {
-    "sharp@0.32.6": true
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "^16.3.3",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
   }
 }
