@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: npm
 
       - name: Install dependencies
         run: npm install
@@ -28,4 +27,8 @@ jobs:
         run: npm run typecheck
 
       - name: Build
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/postgres
+          PAYLOAD_SECRET: ci-only-secret-change-me
+          NEXT_PUBLIC_SITE_URL: http://localhost:3000
         run: npm run build
