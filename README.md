@@ -1,14 +1,37 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/376bd958-4732-475a-9b3c-f9c59ced77c3/deploy-status)](https://app.netlify.com/sites/blog-brunoromeiro/deploys)
+# Bruno Romeiro Blog
 
-# Blog do Bruno Romeiro
+Nova geração do blog pessoal de Bruno Romeiro.
 
-Personal Blog / Site
+## Stack
 
-Developer Stack
+- Next.js 16
+- React 19
+- TypeScript
+- Payload CMS
+- Lexical
+- PostgreSQL
 
-- [React](https://reactjs.org)
-- [Gatsby](https://www.gatsbyjs.org)
-- [GraphQL](https://graphql.org)
-- [Netlify](https://www.netlify.com)
+## Objetivo
 
-Site created based on Willian Justen's course [Gatsby: Crie um site PWA com React, GraphQL e Netlify CMS](https://www.udemy.com/share/101GK2A0oadF5URng=/)
+Construir uma plataforma editorial própria para compartilhar conteúdo sobre engenharia de software, frontend, arquitetura, liderança técnica, IA, tecnologia e aprendizados pessoais.
+
+O Gatsby atual permanece como referência histórica durante a migração. Esta branch é a fundação do rewrite e não altera a produção.
+
+## Desenvolvimento
+
+1. Instale Node.js 20.9+.
+2. Copie `.env.example` para `.env.local`.
+3. Preencha `DATABASE_URL` e `PAYLOAD_SECRET`.
+4. Instale as dependências com `npm install`.
+5. Rode `npm run dev`.
+6. Acesse `/` para o site e `/admin` para o CMS.
+
+## Próximas etapas
+
+- consolidar schema editorial;
+- configurar PostgreSQL de desenvolvimento;
+- implementar design system;
+- migrar conteúdo e URLs do Gatsby;
+- adicionar busca, SEO e métricas;
+- configurar storage de mídia para produção;
+- configurar CI/CD e previews.
